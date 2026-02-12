@@ -1,8 +1,9 @@
 //db ke sath kaam krte time, better to use try/catch, async/await
-import dotenv from "dotenv"
+import dotenv from "dotenv";
 import connectDB from "./db/index.js";
+import { app } from "./app.js";   
 
-dotenv.config()
+dotenv.config();
 
 connectDB()
   .then(() => {
@@ -15,8 +16,6 @@ connectDB()
   .catch((err) => {
     console.log("MONGO db_connection failed !!!", err);
   });
- 
-
 
 
 
